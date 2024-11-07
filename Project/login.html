@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login-form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="loginform">
+            <div class="login">
+                <h1>Login</h1>
+                <div class="box">
+                    <input type="text" id="username" name="username" placeholder="Email" required>
+                    <label></label>
+                    <br><br>
+
+                    <input type="password" id="password" name="password" placeholder="password" required>
+                    <label></label>
+                </div>
+                <br><br><br>
+                <a>Forget password?</a>
+                <br><br>
+                <button type="submit" class="button">Login</button>
+                <div class="new-account">
+                <p>new user?</p><a href="signup.html"><b>Sign up</b></a>
+            </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginform").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "kamalesh" && password === "kamal") {
+                window.location.href = "zenin.html";
+            } else {
+                alert("Invalid username or password");
+            }
+        });
+    </script>
+</body>
+</html>
